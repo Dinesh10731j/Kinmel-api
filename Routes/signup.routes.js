@@ -1,22 +1,9 @@
-import mongoose from "mongoose";
+import express from "express";
+import Signup from "../Controller/signup.controller.js";
+const SigupRoute = express.Router();
 
-const UserSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: [true, "Email is required"],
-  },
 
-  password: {
-    type: String,
-    required: [true, "Password id required"],
-  },
+SigupRoute.post("/signup",Signup);
 
-  confirmpassword: {
-    type: String,
-    required: [true, "ConfrimPassword is requuired"],
-  },
-});
 
-const UserModel = mongoose.Model(UserSchema, "Users");
-
-export default UserModel;
+export default SigupRoute;
