@@ -34,7 +34,7 @@ const Login = async (req, res) => {
     res.status(200).json({
       msg: "Login successful",
       success: true,
-      token, // Include the JWT token in the response
+      token:token, // Include the JWT token in the response
     });
 
   } catch (err) {
