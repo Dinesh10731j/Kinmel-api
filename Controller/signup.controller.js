@@ -1,5 +1,5 @@
 import UserModel from "../Model/users.model.js";
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 
 const Signup = async (req, res) => {
   try {
