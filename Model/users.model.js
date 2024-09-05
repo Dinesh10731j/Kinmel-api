@@ -13,7 +13,16 @@ const userSchema = new mongoose.Schema({
   confirmpassword: {
     type: String,
     required: true,
+  },
+
+  role:{
+    type:String,
+    enum:['admin','seller','user'],
+    default:'user',
   }
+
+
+
 });
 
 const UserModel = mongoose.model('User', userSchema);
