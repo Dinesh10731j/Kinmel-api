@@ -3,14 +3,14 @@ import bcrypt from "bcryptjs"
 
 const Signup = async (req, res) => {
   try {
-    const { email, password, confirmpassword } = req.body;
+    const { email, password, confirmpassword,name } = req.body;
     if (password !== confirmpassword) {
       return res.status(400).json({ msg: "Passwords do not match", success: false });
     }
 
     const hashPassword = await bcrypt.hash(password,10);
     const hashConfirmPassword = await bcrypt.hash(confirmpassword,10)
-    await UserModel.create({ email, password:hashPassword, confirmpassword:hashConfirmPassword });
+    await UserModel.create({name,email, password:hashPassword, confirmpassword:hashConfirmPassword });
 
     res.status(201).json({ msg: "User created successfully", success: true });
   } catch (err) {
