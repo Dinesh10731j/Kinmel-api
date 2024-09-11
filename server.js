@@ -7,6 +7,7 @@ import cors from "cors";
 dotenv.config();
 import ConnectdB from "./Db/db.conn.js";
 import PaymentConfigRoute from "./Routes/paymentconfig.routes.js";
+import userDetailsRoute from "./Routes/userdetails.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -14,7 +15,7 @@ app.use("/api",SigupRoute);
 app.use("/api",LoginRoute);
 app.use("/api",PaymentIntentRoute);
 app.use("/api",PaymentConfigRoute);
-
+app.use("/api",userDetailsRoute);
 
 
 ConnectdB().then(()=>{
