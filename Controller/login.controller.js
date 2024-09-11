@@ -36,6 +36,7 @@ const Login = async (req, res) => {
       success: true,
       token:token, // Include the JWT token in the response
       role:user?.role,
+      userid:user?._id,
     });
 
   } catch (err) {
