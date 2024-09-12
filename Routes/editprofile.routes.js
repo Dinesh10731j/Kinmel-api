@@ -5,7 +5,7 @@ import express from "express";
 const editProfileRoute = express.Router();
 
 
-editRoute.patch("/editprofile",editProfile);
+editProfileRoute.patch("/editprofile",editProfile);
 
 
 
