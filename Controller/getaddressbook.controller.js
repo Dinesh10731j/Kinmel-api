@@ -1,14 +1,15 @@
 import addressBookModel from "../Model/addressbook.model.js";
 const getAddressBook = async (req, res) => {
-  try {
     const { userId } = req.params;
+  try {
+  
 
-    const userAddressBook = await addressBookModel.findById({ userId });
+    const userAddressBook = await addressBookModel.findOne({ userId });
 
     if (!userAddressBook) {
       return res
-        .status(400)
-        .json({ msg: "User addressbook not found", success: false });
+        .status(404)
+        .json({ msg: "User addressbook not found", success: false,data:userAddressBook });
     }
 
     res
