@@ -4,7 +4,7 @@ const getAddressBook = async (req, res) => {
   try {
   
 
-    const userAddressBook = await addressBookModel.findOne({ userId });
+    const userAddressBook = await addressBookModel.find({ userId });
 
     if (!userAddressBook) {
       return res
