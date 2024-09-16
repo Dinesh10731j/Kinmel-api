@@ -11,6 +11,7 @@ import userDetailsRoute from "./Routes/userdetails.routes.js";
 import editProfileRoute from "./Routes/editprofile.routes.js";
 import userContactRoute from "./Routes/usercontact.routes.js";
 import addressBookRoute from "./Routes/addressbook.routes.js";
+import getAddressRoute from "./Routes/getaddressbook.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -22,6 +23,7 @@ app.use("/api",userDetailsRoute);
 app.use("/api",editProfileRoute);
 app.use("/api",userContactRoute);
 app.use("/api",addressBookRoute);
+app.use("/api",getAddressRoute)
 
 ConnectdB().then(()=>{
     app.listen(process.env.PORT || 2010,()=>{
