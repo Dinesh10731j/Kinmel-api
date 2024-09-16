@@ -9,12 +9,12 @@ const getAddressBook = async (req, res) => {
     if (!userAddressBook) {
       return res
         .status(404)
-        .json({ msg: "User addressbook not found", success: false,data:userAddressBook });
+        .json({ msg: "User addressbook not found", success: false });
     }
 
     res
       .status(200)
-      .json({ msg: "User addressbook fetch successfully", success: true });
+      .json({ msg: "User addressbook fetch successfully", success: true,data:userAddressBook });
   } catch (err) {
     res
       .status(500)
