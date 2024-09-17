@@ -5,7 +5,7 @@ import express from "express";
 const deleteAddressBookRoute = express.Router();
 
 deleteAddressBookRoute.delete(
-  "/address-books/:addressBookId",
+  "/address-book/:addressBookId",
   deleteAddressBook
 );
 
