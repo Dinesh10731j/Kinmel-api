@@ -1,7 +1,5 @@
-import deleteAddressBook from "../Controller/deleteaddressbook.js";
-
 import express from "express";
-
+import deleteAddressBook from "../Controller/deleteaddressbook.js";
 const deleteAddressBookRoute = express.Router();
 
 deleteAddressBookRoute.delete(

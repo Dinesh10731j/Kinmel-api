@@ -3,8 +3,6 @@ import getAddressBook from "../Controller/getaddressbook.controller.js";
 
 const getAddressRoute = express.Router();
 
-getAddressRoute.get('/getaddressbook/:userId',getAddressBook);
-
-
+getAddressRoute.get("/getaddressbook/:userId", getAddressBook);
 
 export default getAddressRoute;
