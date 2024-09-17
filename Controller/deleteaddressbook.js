@@ -2,9 +2,7 @@ import addressBookModel from "../Model/addressbook.model.js";
 const deleteAddressBook = async (req, res) => {
   const { addressBookId } = req.params;
   try {
-    const deletedAddressBook = await addressBookModel.findByIdAndDelete({
-      addressBookId,
-    });
+    const deletedAddressBook = await addressBookModel.findByIdAndDelete(addressBookId);
 
     if (!deletedAddressBook) {
       return res
