@@ -17,7 +17,7 @@ const paymentOption = async (req, res) => {
 
 
 
-    res.status(200).json({msg:'Adress option added succesfully',success:true});
+    res.status(200).json({msg:'Address option added succesfully',success:true});
   } catch (err) {
     res.status(500).json({ msg: "Internal server error", success: false,error:err.message });
   }
