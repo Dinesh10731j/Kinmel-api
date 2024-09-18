@@ -14,7 +14,7 @@ const paymentOptionSchema = new mongoose.Schema({
     type: String,
     required: [true, "Details is required"],
   },
-});
+},{timestamps:true});
 
 const paymentOptionModel = mongoose.model("Paymentoption", paymentOptionSchema);
 
