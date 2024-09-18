@@ -13,6 +13,7 @@ import userContactRoute from "./Routes/usercontact.routes.js";
 import addressBookRoute from "./Routes/addressbook.routes.js";
 import getAddressRoute from "./Routes/getaddressbook.routes.js";
 import deleteAddressBookRoute from "./Routes/deleteaddressbook.routes.js";
+import editAddressBookRoute from "./Routes/editaddressbook.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -26,6 +27,7 @@ app.use("/api",userContactRoute);
 app.use("/api",addressBookRoute);
 app.use("/api",getAddressRoute);
 app.use("/api",deleteAddressBookRoute);
+app.use("/api",editAddressBookRoute);
 
 ConnectdB().then(()=>{
     app.listen(process.env.PORT || 2010,()=>{
