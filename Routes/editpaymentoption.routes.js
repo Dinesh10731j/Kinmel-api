@@ -1,5 +1,5 @@
 import express from "express";
-import editPaymentOption from "../Controller/editpaymentoption.controller/js";
+import editPaymentOption from "../Controller/editpaymentoption.controller.js";
 
 const editPaymentOptionRoute = express.Router();
 
