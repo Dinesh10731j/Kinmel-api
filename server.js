@@ -16,6 +16,7 @@ import deleteAddressBookRoute from "./Routes/deleteaddressbook.routes.js";
 import editAddressBookRoute from "./Routes/editaddressbook.routes.js";
 import paymentOptionRoute from "./Routes/paymentoption.routes.js";
 import editPaymentOptionRoute from "./Routes/editpaymentoption.routes.js";
+import getPaymentOptionRoute from "./Routes/getpaymentoption.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -32,6 +33,8 @@ app.use("/api",deleteAddressBookRoute);
 app.use("/api",editAddressBookRoute);
 app.use("/api",paymentOptionRoute);
 app.use("/api",editPaymentOptionRoute);
+app.use("/api",getPaymentOptionRoute);
+
 
 
 ConnectdB().then(()=>{
