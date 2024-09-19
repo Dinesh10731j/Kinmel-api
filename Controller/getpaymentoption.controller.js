@@ -1,7 +1,7 @@
 import paymentOptionModel from "../Model/paymentoption.model.js";
 const getPaymentOption = async (req, res) => {
   try {
-    const { userId } = req.body;
+    const { userId } = req.params;
     const paymentOptions = await paymentOptionModel.find({ userId });
 
     if (!paymentOptions && paymentOptions?.length === 0) {
