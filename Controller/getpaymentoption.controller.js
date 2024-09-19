@@ -12,7 +12,7 @@ const getPaymentOption = async (req, res) => {
 
     res
       .status(200)
-      .json({ msg: "Payment option fetched successfully", success: true });
+      .json({ msg: "Payment option fetched successfully", success: true ,data:paymentOptions});
   } catch (err) {
     res
       .status(500)
@@ -20,6 +20,7 @@ const getPaymentOption = async (req, res) => {
         msg: "Internal server error",
         success: false,
         error: err?.message,
+        
       });
   }
 };
