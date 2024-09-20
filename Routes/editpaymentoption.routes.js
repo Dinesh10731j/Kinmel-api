@@ -3,7 +3,7 @@ import editPaymentOption from "../Controller/editpaymentoption.controller.js";
 
 const editPaymentOptionRoute = express.Router();
 
-editPaymentOptionRoute.patch("/editpayment-option",editPaymentOption);
+editPaymentOptionRoute.patch("/edit-payment-option",editPaymentOption);
 
 
 export default editPaymentOptionRoute;
