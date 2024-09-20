@@ -13,7 +13,7 @@ const deletePaymentOption = async (req,res) => {
         }
 
 
-        res.status(200).josn({msg:'Payment option deleted successfully',success:true});
+        res.status(200).json({msg:'Payment option deleted successfully',success:true});
     }catch(err){
 
         res.status(500).json({msg:'Internal server error',success:false,error:err.message});
