@@ -21,6 +21,7 @@ import deletePaymentOptionRoute from "./Routes/deletepaymentoption.routes.js";
 import cancellatinRoute from "./Routes/cancellation.routes.js";
 import getCancellationRoute from "./Routes/getcancellation.routes.js";
 import editCancellationRoute from "./Routes/editcancellation.routes.js";
+import deleteCancellationRoute from "./Routes/deletecancellation.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -41,7 +42,9 @@ app.use("/api",getPaymentOptionRoute);
 app.use("/api",deletePaymentOptionRoute);
 app.use("/api",cancellatinRoute);
 app.use("/api",getCancellationRoute);
-app.use("/api",editCancellationRoute)
+app.use("/api",editCancellationRoute);
+app.use("/api",deleteCancellationRoute);
+
 
 
 
