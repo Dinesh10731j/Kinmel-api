@@ -13,7 +13,7 @@ const getCancellation = async (req, res) => {
 
     res
       .status(200)
-      .json({ msg: "User Cancellation fetch successfully", success: true });
+      .json({ msg: "User Cancellation fetch successfully", success: true,data:cancellations });
   } catch (err) {
     res
       .status(500)
