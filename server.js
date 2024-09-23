@@ -23,35 +23,34 @@ import getCancellationRoute from "./Routes/getcancellation.routes.js";
 import editCancellationRoute from "./Routes/editcancellation.routes.js";
 import deleteCancellationRoute from "./Routes/deletecancellation.routes.js";
 import returnRoute from "./Routes/return.routes.js";
+import getReturnRoute from "./Routes/getreturn.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/api",SigupRoute);
-app.use("/api",LoginRoute);
-app.use("/api",PaymentIntentRoute);
-app.use("/api",PaymentConfigRoute);
-app.use("/api",userDetailsRoute);
-app.use("/api",editProfileRoute);
-app.use("/api",userContactRoute);
-app.use("/api",addressBookRoute);
-app.use("/api",getAddressRoute);
-app.use("/api",deleteAddressBookRoute);
-app.use("/api",editAddressBookRoute);
-app.use("/api",paymentOptionRoute);
-app.use("/api",editPaymentOptionRoute);
-app.use("/api",getPaymentOptionRoute);
-app.use("/api",deletePaymentOptionRoute);
-app.use("/api",cancellatinRoute);
-app.use("/api",getCancellationRoute);
-app.use("/api",editCancellationRoute);
-app.use("/api",deleteCancellationRoute);
-app.use("/api",returnRoute);
+app.use("/api", SigupRoute);
+app.use("/api", LoginRoute);
+app.use("/api", PaymentIntentRoute);
+app.use("/api", PaymentConfigRoute);
+app.use("/api", userDetailsRoute);
+app.use("/api", editProfileRoute);
+app.use("/api", userContactRoute);
+app.use("/api", addressBookRoute);
+app.use("/api", getAddressRoute);
+app.use("/api", deleteAddressBookRoute);
+app.use("/api", editAddressBookRoute);
+app.use("/api", paymentOptionRoute);
+app.use("/api", editPaymentOptionRoute);
+app.use("/api", getPaymentOptionRoute);
+app.use("/api", deletePaymentOptionRoute);
+app.use("/api", cancellatinRoute);
+app.use("/api", getCancellationRoute);
+app.use("/api", editCancellationRoute);
+app.use("/api", deleteCancellationRoute);
+app.use("/api", returnRoute);
+app.use("/api",getReturnRoute);
 
-
-
-
-ConnectdB().then(()=>{
-    app.listen(process.env.PORT || 2010,()=>{
-        console.log(`Listening to port ${process.env.PORT}:`);
-    })
-})
+ConnectdB().then(() => {
+  app.listen(process.env.PORT || 2010, () => {
+    console.log(`Listening to port ${process.env.PORT}:`);
+  });
+});
