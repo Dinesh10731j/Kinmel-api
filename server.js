@@ -22,6 +22,7 @@ import cancellatinRoute from "./Routes/cancellation.routes.js";
 import getCancellationRoute from "./Routes/getcancellation.routes.js";
 import editCancellationRoute from "./Routes/editcancellation.routes.js";
 import deleteCancellationRoute from "./Routes/deletecancellation.routes.js";
+import returnRoute from "./Routes/return.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -44,6 +45,7 @@ app.use("/api",cancellatinRoute);
 app.use("/api",getCancellationRoute);
 app.use("/api",editCancellationRoute);
 app.use("/api",deleteCancellationRoute);
+app.use("/api",returnRoute);
 
 
 

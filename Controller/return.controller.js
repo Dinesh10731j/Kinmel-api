@@ -29,7 +29,7 @@ const Returns = async (req, res) => {
     }
 
     res.status(200).json({ msg: "Return created successfully" });
-  } catch (err) {
+  } catch(err) {
     res
       .status(500)
       .json({
