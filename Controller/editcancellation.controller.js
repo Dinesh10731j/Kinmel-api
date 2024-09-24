@@ -39,7 +39,7 @@ res.status(200).json({msg:'Cancellation edited successfully',success:false});
   } catch (err) {
     res
       .status(500)
-      .josn({
+      .json({
         msg: "Internal server error",
         success: false,
         error: err.message,

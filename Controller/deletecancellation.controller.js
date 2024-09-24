@@ -19,7 +19,7 @@ const deleteCancellation = async (req, res) => {
   } catch (err) {
     res
       .status(500)
-      .josn({
+      .json({
         msg: "Internal srver error",
         success: false,
         error: err.message,

@@ -12,7 +12,7 @@ const deleteReturn = async (req,res)=>{
         }
 
 
-        res.status(200).josn({msg:'Retuen deleted successfully',success:true});
+        res.status(200).json({msg:'Retuen deleted successfully',success:true});
 
     }catch(err){
 
