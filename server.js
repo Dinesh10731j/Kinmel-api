@@ -25,6 +25,7 @@ import deleteCancellationRoute from "./Routes/deletecancellation.routes.js";
 import returnRoute from "./Routes/return.routes.js";
 import getReturnRoute from "./Routes/getreturn.routes.js";
 import editReturnRoute from "./Routes/editreturn.routes.js";
+import deleteReturnRoute from "./Routes/deletereturn.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -50,6 +51,7 @@ app.use("/api", deleteCancellationRoute);
 app.use("/api", returnRoute);
 app.use("/api",getReturnRoute);
 app.use("/api",editReturnRoute);
+app.use("/api",deleteReturnRoute);
 
 ConnectdB().then(() => {
   app.listen(process.env.PORT || 2010, () => {
