@@ -2,9 +2,9 @@ import returnModel from "../Model/return.model.js";
 const editReturn = async (req,res)=> {
     try{
 
-        const {comments,orderId,productName,reason,userId} = req.body;
+        const {comments,orderId,productName,reason,returnId} = req.body;
 
-        const editedReturn = await returnModel.findByIdAndUpdate(userId,{comments,orderId,productName,reason});
+        const editedReturn = await returnModel.findByIdAndUpdate(returnId,{comments,orderId,productName,reason});
 
         if(!editedReturn){
             return res.status(400).json({msg:'Failed to edit return',success:false})
