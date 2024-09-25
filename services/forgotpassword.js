@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-export const generateRandomPassword = async (length = 8) => {
+export const generateRandomPassword =  (length = 8) => {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let password = '';
     for (let i = 0; i < length; i++) {
@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-export const sendEmail = async (to,subject,newPassword)=>{
+export const sendEmail =  (to,subject,newPassword)=>{
 const text = `Your new email is ${newPassword}`
     const mailOptions = {
         from:process.env.GMAIL_USER,

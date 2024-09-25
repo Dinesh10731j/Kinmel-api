@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs';
 const forgotPassword = async (req, res) => {
     try {
         const { email } = req.body;
-        console.log(email);
+    
 
         // Step 1: Find the user by email
         const user = await UserModel.findOne({ email }); // Adjust based on your user model
@@ -31,7 +31,7 @@ const forgotPassword = async (req, res) => {
         await user.save(); // Save the updated user document
 
         // Step 5: Send the new password via email
-        await sendEmail(email, 'Forgot Password', newPassword);
+         sendEmail(email, 'Forgot Password', newPassword);
 
         // Step 6: Respond to the client
         res.status(200).json({ msg: 'New password sent to your email', success: true });
