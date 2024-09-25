@@ -1,5 +1,5 @@
-import { generateRandomPassword } from "../services/forgotpassword";
-import { sendEmail } from "../services/forgotpassword";
+import { generateRandomPassword } from "../services/forgotpassword.js";
+import { sendEmail } from "../services/forgotpassword.js";
 import UserModel from "../Model/users.model.js";
 import bcrypt from 'bcryptjs';
 
