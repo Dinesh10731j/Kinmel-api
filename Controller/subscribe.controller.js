@@ -8,7 +8,7 @@ const Subscribe = async (req, res) => {
     if (alreadyExists) {
       return res
         .status(409)
-        .jon({ msg: "Subscriber already exists", success: true });
+        .json({ msg: "Subscriber already exists", success: true });
     }
     const subscribedUsers = await subscribeModel.create({ email });
     if (!subscribedUsers) {
