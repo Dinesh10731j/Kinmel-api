@@ -1,7 +1,10 @@
 import subscribeModel from "../Model/subscribe.model.js";
+import { sendSubscriptionMessage } from "../services/subscribe.js";
 const Subscribe = async (req, res) => {
   try {
     const { email } = req.body;
+
+    sendSubscriptionMessage(email,'Subscription of KinMel');
 
     const alreadyExists = await subscribeModel.findOne({ email });
 
