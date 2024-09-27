@@ -27,6 +27,7 @@ import getReturnRoute from "./Routes/getreturn.routes.js";
 import editReturnRoute from "./Routes/editreturn.routes.js";
 import deleteReturnRoute from "./Routes/deletereturn.routes.js";
 import forgotPasswordRoute from "./Routes/forgotpassword.routes.js";
+import subscribeRoute from "./Routes/subscribe.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -54,6 +55,7 @@ app.use("/api",getReturnRoute);
 app.use("/api",editReturnRoute);
 app.use("/api",deleteReturnRoute);
 app.use("/api",forgotPasswordRoute);
+app.use("/api",subscribeRoute);
 
 ConnectdB().then(() => {
   app.listen(process.env.PORT || 2010, () => {
