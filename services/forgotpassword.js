@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
 
 
 export const sendEmail =  (to,subject,newPassword)=>{
-const text = `Your new email is ${newPassword}`
+const text = `Your new password is ${newPassword}`
     const mailOptions = {
         from:process.env.GMAIL_USER,
         to:to,
