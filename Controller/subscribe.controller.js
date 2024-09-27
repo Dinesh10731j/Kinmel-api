@@ -12,7 +12,7 @@ const Subscribe = async (req, res) => {
     }
     const subscribedUsers = await subscribeModel.create({ email });
     if (!subscribedUsers) {
-      return res.status({ msg: "Failed to subscribe kinMel", success: false });
+      return res.status(400).json({ msg: "Failed to subscribe kinMel", success: false });
     }
 
     res.status(201).json({ msg: "Subscription successfull", success: true });
