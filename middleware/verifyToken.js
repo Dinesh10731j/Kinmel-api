@@ -4,7 +4,7 @@ dotenv.config();
 
 const verifyJwtToken = (req, res, next) => {
   
-    const token = req.headers['Authorization']?.replace('Bearer ', '').trim();
+    const token = req.headers['authorization']?.replace('Bearer ', '').trim();
 
 
     if (!token) {
