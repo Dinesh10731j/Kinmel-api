@@ -17,19 +17,19 @@ const verifyJwtToken = (req, res, next) => {
         console.log(decoded);
         req.user = decoded;
 
-        console.log(req.user?.roles);
+        console.log(req.user?.admin);
 
         
-        if (req.user.roles !== 'admin') {
+        if (req.user.admin !== 'admin') {
             return res.status(403).json({ msg: 'Access denied. Admins only.', success: false });
         }
 
-        if (req.user.roles !== 'seller') {
+        if (req.user.admin !== 'seller') {
             return res.status(403).json({ msg: 'Access denied. Sellers only.', success: false });
         }
 
 
-        if(req.user.roles!=='user'){
+        if(req.user.admin!=='user'){
 
             return res.status(403).json({msg:'Access denied. Users only',success:false});
         }
