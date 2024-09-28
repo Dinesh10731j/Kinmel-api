@@ -15,12 +15,12 @@ const verifyJwtToken = (roleRequired) => {
             
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-            console.log('This is decoded value of jwt',decoded);
+           
           
             req.user = decoded; 
 
            
-            if (req.user?.admin !== roleRequired) {
+            if (req.user?.roles !== roleRequired) {
                 return res.status(403).json({ 
                     msg: `Access denied. Only ${roleRequired} are allowed.`, 
                     success: false 
