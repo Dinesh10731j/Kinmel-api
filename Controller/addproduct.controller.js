@@ -7,6 +7,7 @@ const addProduct = async (req, res) => {
       productImage,
       productName,
       productPrice,
+      userId
     } = req.body;
 
     const products = await productModel.create({
@@ -15,6 +16,7 @@ const addProduct = async (req, res) => {
       productImage,
       productName,
       productPrice,
+      userId
     });
 
     if (!products) {
