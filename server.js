@@ -29,6 +29,7 @@ import deleteReturnRoute from "./Routes/deletereturn.routes.js";
 import forgotPasswordRoute from "./Routes/forgotpassword.routes.js";
 import subscribeRoute from "./Routes/subscribe.routes.js";
 import addProductRoute from "./Routes/addproduct.routes.js";
+import e_sewaRoute from "./Routes/e_sewa.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -58,6 +59,7 @@ app.use("/api",deleteReturnRoute);
 app.use("/api",forgotPasswordRoute);
 app.use("/api",subscribeRoute);
 app.use("/api",addProductRoute);
+app.use("/api",e_sewaRoute);
 
 ConnectdB().then(() => {
   app.listen(process.env.PORT || 2010, () => {
